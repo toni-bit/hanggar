@@ -1,10 +1,10 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","[]      BISMILLAHIRRAHMANIRRAHIM      []\n");
-echo color("yellow","[]          BY : HERUTOK              []\n");
+echo color("green","[]      TIDAK UNTUK DIJUAL      []\n");
+echo color("yellow","[]          BY : HANGGAR          []\n");
 echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
-echo color("yellow","[] Format Penulisan Nomor 62xxxxxxxx  []\n");
+echo color("yellow","[] Penulisan Nomor 62xxxxxxxx  []\n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
@@ -78,7 +78,7 @@ function change(){
         sleep(1);
         }
         sleep(3);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"G-GPYRGKP"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
         sleep(3);
@@ -102,8 +102,8 @@ function change(){
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("red","========( PIN ANDA = 123789 )========")."\n";
-         $data2 = '{"pin":"123789"}';
+         echo color("red","========( PIN ANDA = 111222 )========")."\n";
+         $data2 = '{"pin":"111222"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp set pin: ";
          $otpsetpin = trim(fgets(STDIN));
